@@ -9,7 +9,7 @@ const WINDOW_HEIGHT = Dimensions.get('window').height;
 
 const mainNav= [
     {title:"BarberShops", color:"#37C778",icon:require("../../assets/images/barber.png"),link:"BarberShops"},
-    {title:"Orders",color:"#F05561",icon:require("../../assets/images/choices.png"),link:"BarberShops"},
+    {title:"Orders",color:"#F05561",icon:require("../../assets/images/choices.png"),link:"Orders"},
     ];
  
     

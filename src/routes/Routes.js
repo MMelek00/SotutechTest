@@ -11,6 +11,7 @@ import HomeScreen from '../pages/home/home';
 import BarberShops from '../pages/barberBooking/barberShops';
 import ShopDetails from '../pages/barberBooking/shopDetails';
 import BookBarber from '../pages/barberBooking/bookBareber';
+import Orders from '../pages/orders/orders';
 import {
   HeaderTitle,
   HomeHeaderBack
@@ -64,6 +65,21 @@ const MainStack = createStackNavigator(
       navigationOptions: ({ navigation }) => {
         return {
           headerTitle: <HeaderTitle text="Book Now" />,
+          headerTitleStyle: CustomRouteStyle.headerTitleStyle,
+          headerRight: (<View />),
+          headerLeft: (
+            <HomeHeaderBack
+            navigation={navigation}
+            _onPress={() => navigation.goBack()} /> 
+           ),
+          };
+      }
+    },
+    Orders: {
+      screen: Orders,
+      navigationOptions: ({ navigation }) => {
+        return {
+          headerTitle: <HeaderTitle text="Orders" />,
           headerTitleStyle: CustomRouteStyle.headerTitleStyle,
           headerRight: (<View />),
           headerLeft: (
