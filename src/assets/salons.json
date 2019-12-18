@@ -2,8 +2,8 @@
  {
     "name":"DELPHINE COURTEILLE",
     "photo":"https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/beaute/cheveux/coiffure/meilleurs-salons-de-coiffure-paris/delphine-courteille/51868674-1-fre-FR/Delphine-Courteille.jpg",
-    "description":"Hair Room Service by John Nollet au Park Hyatt Paris-Vendôme",
-    "workDays":"Monday To Friday",
+    "description":"Hair Room Service by DELPHINE COURTEILLE au Park Hyatt Paris-Vendôme",
+    "workDays":"Monday To Sunday",
     "workTime":"8am To 5pm",
     "employees":[
     {
@@ -27,7 +27,7 @@
     "name":"JOHN NOLLET",
     "photo":"https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/beaute/cheveux/coiffure/meilleurs-salons-de-coiffure-paris/john-nollet/51868874-1-fre-FR/John-Nollet.jpg",
     "description":"Hair Room Service by John Nollet au Park Hyatt Paris-Vendôme",
-    "workDays":"Monday To Friday",
+    "workDays":"Monday To Sunday",
     "workTime":"8am To 5pm",
     "employees":[
         {
@@ -50,8 +50,8 @@
  {
     "name":"COIFFIRST",
     "photo":"https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/beaute/cheveux/coiffure/meilleurs-salons-de-coiffure-paris/coiffirst/51868434-1-fre-FR/Coiffirst.jpg",
-    "description":"Hair Room Service by John Nollet au Park Hyatt Paris-Vendôme",
-    "workDays":"Monday To Friday",
+    "description":"Hair Room Service by COIFFIRST au Park Hyatt Paris-Vendôme",
+    "workDays":"Monday To Sunday",
     "workTime":"8am To 5pm",
     "employees":[
         {
@@ -62,7 +62,7 @@
         {
         "name":"Jhon Snow",
         "photo":"https://images.squarespace-cdn.com/content/v1/5bc7f73c93a6325fdf81b824/1557333956633-ID5TKLSD5LQNCDPHGEOD/ke17ZwdGBToddI8pDm48kJB_XQ3Dc5SllUdWbukQo69Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpx6nEhjlnWL4Jp2yRUKnAHfAtKyAEGaEsOmaOT_zZoS2TtcLgPBsTCXYa-xKfKtauE/image-asset.jpeg",
-        "available":false
+        "available":true
         },
         {
         "name":"Ross what",
@@ -74,7 +74,8 @@
  {
     "name":"MASSATO",
     "photo":"https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/beaute/cheveux/coiffure/meilleurs-salons-de-coiffure-paris/massato/51869492-1-fre-FR/Massato.jpg",
-    "workDays":"Monday To Friday",
+    "description":"Hair Room Service by MASSATO au Park Hyatt Paris-Vendôme",
+    "workDays":"Monday To Sunday",
     "workTime":"8am To 5pm",
     "employees":[
         {
