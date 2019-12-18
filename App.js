@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { Platform, StatusBar, View } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
-
 import AppNavigation from './src/routes/Routes';
 
 export default class App extends Component {
-  componentDidMount () {
-}
   render() {
     return (
       <View style={{ flex: 1 }}>
