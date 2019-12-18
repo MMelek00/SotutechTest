@@ -1,0 +1,98 @@
+[
+ {
+    "name":"DELPHINE COURTEILLE",
+    "photo":"https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/beaute/cheveux/coiffure/meilleurs-salons-de-coiffure-paris/delphine-courteille/51868674-1-fre-FR/Delphine-Courteille.jpg",
+    "description":"Hair Room Service by DELPHINE COURTEILLE au Park Hyatt Paris-Vendôme",
+    "workDays":"Monday To Sunday",
+    "workTime":"8am To 5pm",
+    "employees":[
+    {
+    "name":"Jack martin",
+    "photo":"https://thenypost.files.wordpress.com/2015/06/barber_mendoza1a.jpg?quality=80&strip=all",
+    "available":true
+    },
+    {
+    "name":"Sammi Nlank",
+    "photo":"https://s3-media3.fl.yelpcdn.com/bphoto/Q9IPxR2EesTZDTu5UTZKRg/ls.jpg",
+    "available":false
+    },
+    {
+    "name":"Nnicoleas",
+    "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6O83JuziBQG6yOnMxEsF8vrAMNVecWBzHFTaMX67s1oNcY2Qhxg&s",
+    "available":false
+    }
+    ]
+ },
+ {
+    "name":"JOHN NOLLET",
+    "photo":"https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/beaute/cheveux/coiffure/meilleurs-salons-de-coiffure-paris/john-nollet/51868874-1-fre-FR/John-Nollet.jpg",
+    "description":"Hair Room Service by John Nollet au Park Hyatt Paris-Vendôme",
+    "workDays":"Monday To Sunday",
+    "workTime":"8am To 5pm",
+    "employees":[
+        {
+        "name":"Jhon Smith",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7kAQd0zZnz-1stEazvGAUp4ttT_GrfH8np3I-Z4eqbdSA758U&s",
+        "available":true
+        },
+        {
+        "name":"Olivier Some",
+        "photo":"https://s3-media4.fl.yelpcdn.com/bphoto/XLAsM67R1kMtYThxyvI4Ow/ls.jpg",
+        "available":true
+        },
+        {
+        "name":"Sam Barber",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCXwY5ZvIcrQOAbek0JYshUmcgW8jhrkG6y0bff3yJspVVpunfcQ&s",
+        "available":false
+        }
+        ]
+ },
+ {
+    "name":"COIFFIRST",
+    "photo":"https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/beaute/cheveux/coiffure/meilleurs-salons-de-coiffure-paris/coiffirst/51868434-1-fre-FR/Coiffirst.jpg",
+    "description":"Hair Room Service by COIFFIRST au Park Hyatt Paris-Vendôme",
+    "workDays":"Monday To Sunday",
+    "workTime":"8am To 5pm",
+    "employees":[
+        {
+        "name":"Jhon Wick",
+        "photo":"https://scontent.cdninstagram.com/v/t51.2885-15/e35/c0.126.1012.1012a/s480x480/70015780_450252132269109_889921151250507182_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=109&oh=ee07b62bdb4906c299ee3f38cc15e010&oe=5E7105D0",
+        "available":false
+        },
+        {
+        "name":"Jhon Snow",
+        "photo":"https://images.squarespace-cdn.com/content/v1/5bc7f73c93a6325fdf81b824/1557333956633-ID5TKLSD5LQNCDPHGEOD/ke17ZwdGBToddI8pDm48kJB_XQ3Dc5SllUdWbukQo69Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpx6nEhjlnWL4Jp2yRUKnAHfAtKyAEGaEsOmaOT_zZoS2TtcLgPBsTCXYa-xKfKtauE/image-asset.jpeg",
+        "available":true
+        },
+        {
+        "name":"Ross what",
+        "photo":"https://a9p9n2x2.stackpathcdn.com/wp-content/blogs.dir/1/files/2018/12/Wade_The_Barber.png",
+        "available":false
+        }
+        ]
+ },
+ {
+    "name":"MASSATO",
+    "photo":"https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/beaute/cheveux/coiffure/meilleurs-salons-de-coiffure-paris/massato/51869492-1-fre-FR/Massato.jpg",
+    "description":"Hair Room Service by MASSATO au Park Hyatt Paris-Vendôme",
+    "workDays":"Monday To Sunday",
+    "workTime":"8am To 5pm",
+    "employees":[
+        {
+        "name":"Malik Zain",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4AbRXeJiY5VutikEg_cbu9AZtnzFwDzi3slPRKQ3gKbNSgI9I&s",
+        "available":true
+        },
+        {
+        "name":"Mike Ross",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN8MZa18RAiMHAbNaqyUuDTYLE75AzPF7EF5FKxmQSt_jcM84R&s",
+        "available":false
+        },
+        {
+        "name":"Harvey Specter",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ1F8oUZXnu8OWT44ZLydhPGBRYI20ZS4a6gpFzNW1rMRVVo4D&s",
+        "available":false
+        }
+        ]
+ }
+]
