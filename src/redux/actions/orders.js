@@ -23,7 +23,7 @@ export function loading() {
   };
 }
 
-  export function fetchOrders(id) {
+  export function fetchOrders() {
     return (dispatch) => {
       try {
       AsyncStorage.getItem('USER_ORDERS_INFO', (err, result) => {

@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, Image, View,Text,Platform,Button,TouchableOpacity } from 'react-native';
+import { ScrollView, StyleSheet, Image, View,Text,Platform,Button,TouchableOpacity,ActivityIndicator,Alert
+} from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import AsyncStorage from '@react-native-community/async-storage';
+
 import moment from 'moment';
 import {StyledInput} from './styledInput';
 import {Colors} from '../../styles';
 import {FONT_BOLD } from '../../styles/typography';
 import {verticalScale,scaleSize} from '../../styles/mixins';
-export default class BookBarber extends Component {
+import { connect } from 'react-redux'
+
+class BookBarber extends Component {
     state = {
         date: new Date(),
         mode: 'date',
         show: false,
-        fullName:''
+        fullName:'',
+        loading:false,
       }
       onChange(name, val) {
         this.setState({ [name]: val });
@@ -39,15 +45,47 @@ export default class BookBarber extends Component {
       timepicker = () => {
         this.show('time');
       }
-      
+       bookNow= async () =>{
+        const { navigation } = this.props;
+
+        if(!this.state.fullName){
+          Alert.alert(
+            'error',
+            'Please fill all Fields',
+
+          );
+        }else{
+        this.setState({ loading: true})
+        let order=this.props.userOrdersData.orders;
+        let obj={
+          name:this.state.fullName,
+          date:this.state.date,
+          barber:navigation.state.params.barber
+        }
+        order.push(obj)
+        try {
+          await AsyncStorage.setItem('USER_ORDERS_INFO', JSON.stringify(order));
+          //await this.props.fetchOrders();
+          this.setState({ loading: false})
+          navigation.navigate('Home');
+        } catch (error) {
+          // Error saving data
+          this.setState({ loading: false})
+        }
+      }
+        }
   render() {
     const { navigation } = this.props;
     let {
         name,
         photo,
       } = navigation.state.params.barber;
-    const { show, date, mode } = this.state;
-
+    const { show, date, mode,loading } = this.state;
+  if(loading){
+    return(<View style={styles.container}>
+      <ActivityIndicator size="large" color="#0000ff" />
+    </View>)
+  }
     return (
         <ScrollView style={styles.container}>
         <View style={styles.headerContainer}>
@@ -81,7 +119,7 @@ export default class BookBarber extends Component {
                     onChange={this.setDate} />
         }
         <TouchableOpacity 
-            //onPress={}
+            onPress={this.bookNow}
             style={styles.buttonStyle}
         >
             <Text style={styles.textStyle} >BOOK NOW</Text>
@@ -145,3 +183,14 @@ const styles = StyleSheet.create({
     alignSelf:'center'
 },
 });
+
+
+const mapStateToProps = state => ({
+  userOrdersData: state.userOrdersData,
+});
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+  }
+};
+export default connect(mapStateToProps,mapDispatchToProps)(BookBarber);

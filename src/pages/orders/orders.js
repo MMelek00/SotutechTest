@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
-import { connect } from 'react-redux'
+import { TouchableOpacity, StyleSheet, Text, View,ActivityIndicator,FlatList } from 'react-native';
+import { connect } from 'react-redux';
+import moment from 'moment';
+
 import {fetchOrders} from '../../redux/actions/orders';
 import {Colors} from '../../styles';
-import {FONT_BOLD } from '../../styles/typography';
-import {verticalScale,scaleSize} from '../../styles/mixins';
+import {FONT_BOLD,FONT_REGULAR } from '../../styles/typography';
+import {verticalScale,scaleSize, width,height} from '../../styles/mixins';
   const EmptyScreen = (props) => {
     return (
       <View style={styles.container}>
@@ -19,17 +21,44 @@ import {verticalScale,scaleSize} from '../../styles/mixins';
     );
   }; 
 class Orders extends Component {
-  componentDidMount () {
-    this.props.fetchOrders();
-    console.log('redux',this.props.userOrdersData);
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading:true,
+    };
+}
+    async componentDidMount () {
+    await this.props.fetchOrders();
+      this.setState({loading:false })
+      console.log('redux',this.props.userOrdersData, this.state.loading);
       }
- 
+      renderItems({ item }) {
+        return (
+          <View  style={styles.card}>
+          <Text style={styles.TextStyle}><Text style={{color:Colors.PRIMARY}}>Name:</Text>{item.name}</Text>
+          <Text style={styles.TextStyle}>{moment(item.date).format("dddd, MMMM Do YYYY h:mm a")}</Text>
+          <Text style={styles.TextStyle}><Text style={{color:Colors.PRIMARY}}>Barber :</Text> {item.barber.name}</Text>
+          </View>
+        );
+      } 
   render() {
-    return (
-      this.props.userOrdersData.orders? (<EmptyScreen navigation={this.props.navigation}/>):(
+    let {orders} = this.props.userOrdersData;
+    console.log('orders',orders);
+    if(this.state.loading){
+      return(
       <View style={styles.container}>
-        <Text>"Welcome to Login"</Text>
+        <ActivityIndicator size="large" color="#0000ff" />
       </View>)
+    }
+    return (
+      !orders? (<EmptyScreen navigation={this.props.navigation}/>):(
+      <View style={styles.container}>
+      <FlatList
+       data={orders}
+       renderItem={this.renderItems.bind(this)}
+       keyExtractor={item => item.date.toString()}
+      />     
+     </View>)
     );
   }
 }
@@ -65,6 +94,30 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     elevation: 2,
     alignSelf:'center'
+}, 
+ card: {
+  //width: width -40,
+  marginBottom:10,
+  borderBottomLeftRadius: 5,
+  borderBottomRightRadius: 5,
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 1 },
+  shadowOpacity: 0.2,
+  shadowRadius: 4,
+  elevation: 2,
+  marginTop: 5,
+  marginHorizontal:5,
+  backgroundColor: '#fff',
+  alignItems:'flex-start',
+  paddingHorizontal:20
+},
+TextStyle: {
+  fontFamily: FONT_REGULAR.fontFamily,
+  fontWeight: FONT_REGULAR.fontWeight,
+  textAlign: 'center',
+  color: Colors.BLACK,
+  fontSize:20,
+  marginTop:10
 },
 });
 
